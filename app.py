@@ -37,7 +37,8 @@ class App(CreateProfile, CreatePassword, Feedbacks):
         st.caption(f"**Programmer by: {CO_FOUNDER}**")
         st.caption("**Get Your Prime Key**: https://yassinesallami.gumroad.com/l/nrbjx")
         st.caption("**My LinkedIn**: https://www.linkedin.com/in/yassinesallami1/")
-        st.caption("**_Description_**: **DnaKey** is a simple service that allows you to create more complex password using a simple key-word!")                   
+        st.caption("**_Description_**: **DnaKey** is a simple service that allows you to create more complex password using a simple key-word!")   
+        st.caption("Donate: [ **_:orange[hixvmx] - :orange[4$]_** ]")
 
 if __name__ == '__main__':
     # Start the app
