@@ -42,7 +42,7 @@ class Feedbacks(PrimeKeyConfig):
             with st.chat_message("user"):  
                 st.write("Your Feedback!")                  
                 st.text(self.user_feedback)
-                self.user_rate = f"Rate: {self.user_rate.index(0)}" if self.user_rate else ""
+                self.user_rate = f"Rate: {self.user_rate}" if self.user_rate else ""
                 st.text(self.user_rate)
 
     def check_feedback_prime_key(self):
