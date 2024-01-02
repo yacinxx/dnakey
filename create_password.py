@@ -144,9 +144,8 @@ class CreatePassword(PrimeKeyConfig):
     def decode_text_button(self):
         if not self.uploaded_file:
             return 1
-        with self.col3:
-            is_disabled = True if not self.key_input else False
-            create_password_button = st.button("Create Password!", disabled=is_disabled, key=1)
+        is_disabled = True if not self.key_input else False
+        create_password_button = st.button("Create Password!", disabled=is_disabled, key=1)
         if create_password_button:
             self.decode_profile_data()                    
 
