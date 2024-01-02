@@ -44,7 +44,7 @@ class CreateProfile(PrimeKeyConfig):
     def profile_name_settings(self):
         if self.created_profiles < 1:
                     st.info("Welcome to DnaKey. We are glad you wanna test it!", icon="🎉")
-        with st.expander("Profile Settings! [See More...]"):
+        with st.expander("Profile Settings! [See More...]", expanded=True):
             if self.created_profiles < 1:
                 st.info("You can start with given your profile a name!", icon="🍿")
             self.create_profile_name()
@@ -77,9 +77,8 @@ class CreateProfile(PrimeKeyConfig):
                 self.arabic = True if "Arabic" in self.has_choice else False        
 
     def create_new_profile(self):
-        with self.col_new_profile1:
-            is_disabled = True if not self.profile_name else False
-            create_new_profile = st.button("Create New Profile", disabled=is_disabled, key=0)
+        is_disabled = True if not self.profile_name else False
+        create_new_profile = st.button("Create New Profile", disabled=is_disabled, key=0)
         if( create_new_profile) and (self.profile_name != ""):
             if self.options_profile_name == "One Profile":
                 empty_input = "profile"
